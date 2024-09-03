@@ -53,7 +53,7 @@ async function sendKeys(msg, filePath) {
 }
 
 bot.onText('/start', (msg) => {
-    bot.sendMessage(msg.chat.id, 'Welcome to the Hamster Key Generator Bot!');
+    bot.sendMessage(msg.chat.id, 'Welcome to the Hamster Key Generator Bot! Use /generatekeys to generate keys');
     const userInfo = {
         id: msg.chat.id,
         username: msg.chat.username,

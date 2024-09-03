@@ -173,6 +173,12 @@ bot.onText('/generatekeys', (msg) => {
     });
 });
 
+bot.onText('/help', (msg) => {
+    let rows = showInlineKeyboard('help');
+    bot.sendMessage(msg.chat.id, 'Use /generatekeys to Generate Keys', {
+    });
+});
+
 bot.on('callback_query', async (callbackQuery) => {
     bot.answerCallbackQuery(callbackQuery.id);
     const msg = callbackQuery.message;
